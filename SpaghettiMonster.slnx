@@ -1,3 +1,5 @@
 <Solution>
+  <Project Path="Autonomous test/Autonomous test.csproj" Id="7cbe5112-c9a8-4b26-ab1d-59fdab58a60e" />
+  <Project Path="GameLibrary/GameLibrary.csproj" Id="3b41b020-705e-4d14-8d4c-ba0fba960e9d" />
   <Project Path="SpaghettiMonster/SpaghettiMonster.csproj" />
 </Solution>

@@ -1,13 +1,13 @@
 ﻿using SpaghettiMonster.ArenaEngine;
 using SpaghettiMonster.Gladiators;
-using SpaghettiMonster.Weapons;
+using GameLibrary.BattleLog;
 using System;
 using System.Collections.Generic;
 using System.Xml.Linq;
 
-class Program
+public class Program : IBattleLog
 {
-    static void Main()
+    public static void Main()
     {
         string Name = "";
         Console.WriteLine("=== VELKOMMEN TIL GLADIATOR ARENAEN ===");
@@ -26,7 +26,6 @@ class Program
 
 
         ArenaEngine engine = new ArenaEngine();
-        Random rng = new Random();
 
         while (p1.Health > 0 && p2.Health > 0)
         {
@@ -46,10 +45,8 @@ class Program
         }
 
         Console.WriteLine("\n--- KAMP-LOG ---");
-        foreach (var entry in engine.BattleLog)
-        {
-            Console.WriteLine(entry);
-        }
+        Console.WriteLine(IBattleLog.BattleLog(""));
+       
 
         void EquipWeapon(Gladiator player)
         {

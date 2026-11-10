@@ -11,7 +11,7 @@ namespace SpaghettiMonster.ArenaEngine
         public List<string> BattleLog = new List<string>();
         public int ActualDamage {  get; private set; }
 
-        public void ExecuteTurn(Gladiator attacker, Gladiator defender)
+        public void ExecuteTurn(Gladiator attacker, Gladiator defender, IBattleLog logger)
         {
             ActualDamage = attacker.EquippedWeapon.BaseDamage;
             Random rng = new Random();

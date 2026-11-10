@@ -14,7 +14,7 @@ namespace SpaghettiMonster.Weapons
 
         public Weapon(string name, int dmg, WeaponType type)
         {
-            if (dmg < 0)
+            if (dmg <= 0)
             {
                 BaseDamage = 1;
                 throw new ArgumentOutOfRangeException("FEJL: Skade må ikke være negativ! Sætter den til 1."); 
