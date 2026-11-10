@@ -1,4 +1,5 @@
-﻿using SpaghettiMonster.Gladiators;
+﻿using GameLibrary.BattleLog;
+using SpaghettiMonster.Gladiators;
 using SpaghettiMonster.Weapons;
 using System;
 using System.Collections.Generic;
@@ -8,8 +9,13 @@ namespace SpaghettiMonster.ArenaEngine
 {
     public class ArenaEngine
     {
-        public List<string> BattleLog = new List<string>();
+        public IBattleLog BattleLog;
         public int ActualDamage {  get; private set; }
+
+        public ArenaEngine(IBattleLog battleLog)
+        {
+
+        }
 
         public void ExecuteTurn(Gladiator attacker, Gladiator defender, IBattleLog logger)
         {
